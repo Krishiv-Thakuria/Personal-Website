@@ -1,0 +1,154 @@
+body {
+  font-family: 'Arial', sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+nav {
+  width: 260px;
+  background: #fff;
+  padding: 60px 24px 0 40px;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.nav-title {
+  font-weight: bold;
+  font-size: 1.7rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.nav-list li {
+  margin-bottom: 32px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #222c4c;
+  font-size: 2.2rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-list a.active, .nav-list a:hover {
+  color: #2563eb;
+}
+
+main {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 90px 80px 0 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.content {
+  width: 100%;
+}
+
+.image {
+  flex: 0 0 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+h1 {
+  font-size: 5.2rem;
+  font-weight: 700;
+  margin-bottom: 56px;
+  color: #111;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.content p, .content ul, .content li {
+  font-size: 2.1rem;
+  line-height: 1.8;
+}
+
+.footnote {
+  font-size: 1rem;
+  color: #222;
+  margin-top: 32px;
+  display: block;
+}
+
+ul, li, p {
+  font-size: 2.1rem;
+  line-height: 1.8;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.links {
+  margin-top: 24px;
+  font-size: 1.1rem;
+}
+
+.links a {
+  margin-right: 18px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  nav {
+    width: 100%;
+    min-height: unset;
+    border-bottom: 1px solid #eee;
+    padding: 32px 18px 0 18px;
+  }
+  main {
+    padding: 40px 8px 0 8px;
+    max-width: 98vw;
+  }
+  h1 {
+    font-size: 2.7rem;
+  }
+  p, ul {
+    font-size: 2.1rem;
+    line-height: 1.8;
+  }
+  .nav-title {
+    font-size: 1.2rem;
+  }
+  .nav-list a {
+    font-size: 1.3rem;
+  }
+} 
