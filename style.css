@@ -126,13 +126,14 @@ a:hover {
 
 .profile-img {
   display: block;
-  width: 75px;
-  height: 75px;
+  width: 650px;
+  height: 650px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 4px;
   margin-bottom: 36px;
   margin-top: 0;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  filter: grayscale(100%);
 }
 
 @media (max-width: 900px) {
