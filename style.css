@@ -96,7 +96,7 @@ main {
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 2rem;
   font-weight: 800;
   margin: 0 0 40px 0;
   color: #111;
@@ -308,4 +308,41 @@ a:hover {
     font-size: 1.4rem;
     padding: 0 16px;
   }
+}
+
+.press-article {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #eee;
+}
+
+.press-article:last-child {
+  border-bottom: none;
+}
+
+.press-article h2 {
+  margin-bottom: 8px;
+}
+
+.press-article h2 a {
+  color: #2563eb;
+  text-decoration: underline;
+  font-size: 1.6rem;
+}
+
+.press-article h2 a:hover {
+  color: #1d4ed8;
+}
+
+.press-source {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.press-description {
+  display: none;
 } 
