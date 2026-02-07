@@ -341,3 +341,117 @@ a:hover {
   text-decoration: underline;
   color: #92400e;
 }
+
+/* Press Cards */
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.press-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none !important;
+  color: inherit;
+  font-family: 'Arial', sans-serif;
+  font-weight: normal;
+}
+
+.press-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+  text-decoration: none !important;
+}
+
+.press-card-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.press-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.press-card:hover .press-card-img img {
+  transform: scale(1.04);
+}
+
+.press-card-body {
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.press-card-body .press-source {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2563eb;
+  margin: 0;
+}
+
+.content .press-card-body h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.4;
+  color: #111;
+  margin: 0;
+}
+
+.press-card:hover .press-card-body h2 {
+  color: #2563eb;
+}
+
+@media (max-width: 900px) {
+  .press-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .press-card-body {
+    padding: 16px 18px 20px;
+  }
+
+  .content .press-card-body h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.05rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .press-grid {
+    gap: 16px;
+  }
+
+  .press-card-body {
+    padding: 14px 16px 18px;
+  }
+
+  .content .press-card-body h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .press-card-body .press-source {
+    font-size: 0.75rem;
+  }
+}
