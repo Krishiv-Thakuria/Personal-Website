@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Krishiv Thakuria</title>
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
 
@@ -48,80 +48,36 @@
         <p style="font-size: 0.95em; margin-top: 6px; text-align: center;">Amjad Masad, Replit CEO</p>
       </div>
 
-      <p class="section-label"><strong>In pictures</strong></p>
-      <div class="gallery-grid">
-        <button class="gallery-tile" data-title="MIT 6.S189" data-desc="Co-Creator and Instructor of MIT's first AI agents course — 6.S189: Foundations and Frontiers of Generative AI, for-credit in the EECS department. Here I'm lecturing on memory for LLMs and AI agents.">
+      <div class="gallery-stack">
+        <figure class="gallery-item">
           <img src="Krishiv%20Thakuria%20MIT.webp" alt="Lecturing MIT 6.S189" loading="lazy">
-          <span class="gallery-overlay"><strong>MIT 6.S189</strong><em>Teaching MIT's first AI agents class</em></span>
-        </button>
-        <button class="gallery-tile" data-title="Aceflow" data-desc="One of the first GPT-era AI tutors, launched in 2023. Sponsored by Microsoft, with millions of views on TikTok and 200,000 users.">
-          <img src="assets/gallery/aceflow.jpg" alt="Aceflow AI tutor" loading="lazy">
-          <span class="gallery-overlay"><strong>Aceflow</strong><em>GPT-era AI tutor with millions of views on TikTok</em></span>
-        </button>
-        <button class="gallery-tile" data-title="Charm Bears" data-desc="AI-powered conversational teddy bears for early learning (NVIDIA Inception, Founders Inc). I designed and engineered a working hardware prototype and shipped it to my little sister to help her with math homework." data-link="https://charmbears.com" data-linktext="charmbears.com">
-          <img src="assets/gallery/charmbears-video.jpg" alt="Charm Bears talking teddy bear" loading="lazy">
-          <span class="gallery-overlay"><strong>Charm Bears</strong><em>Talking teddy bears for early education</em></span>
-        </button>
-        <button class="gallery-tile" data-title="Magic Teacher" data-desc="Photo-to-step-by-step tutoring across math and sciences, available on the iOS App Store." data-link="https://apps.apple.com/sg/app/magic-teacher-ai-study-helper/id6748094350" data-linktext="App Store">
-          <img src="Magic%20Teacher%20App.gif" alt="Magic Teacher app demo" loading="lazy">
-          <span class="gallery-overlay"><strong>Magic Teacher</strong><em>Photo-to-tutoring iOS app</em></span>
-        </button>
-        <button class="gallery-tile" data-title="CheetahPrep" data-desc="An SAT prep platform with an adaptive Learn mode and step-by-step Desmos walkthroughs for the digital SAT." data-link="https://cheetahprep.com" data-linktext="cheetahprep.com">
-          <img src="assets/gallery/cheetahprep.png" alt="CheetahPrep SAT prep platform" loading="lazy">
-          <span class="gallery-overlay"><strong>CheetahPrep</strong><em>SAT prep for the digital SAT</em></span>
-        </button>
-        <button class="gallery-tile" data-title="Early days" data-desc="Where it started: building and demoing things like Call Helper, an Amazon Alexa skill, from my bedroom — long before any of the above existed.">
-          <img src="assets/gallery/alexa.jpg" alt="Building an Amazon Alexa skill" loading="lazy">
-          <span class="gallery-overlay"><strong>Early days</strong><em>Shipping Alexa skills from my bedroom</em></span>
-        </button>
+          <figcaption class="gallery-caption"><strong>MIT 6.S189</strong><em>Teaching MIT's first AI agents class</em></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="PW%206.jpeg" alt="Teaching at MIT Sloan" loading="lazy">
+          <figcaption class="gallery-caption"><strong>MIT Sloan</strong><em>Teaching enterprise AI, where my interest in enterprise AI began</em></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="PW%201.jpeg" alt="Founders Inc" loading="lazy">
+          <figcaption class="gallery-caption"><strong>Founders Inc</strong><em>Moving to SF at 16</em></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="PW%202.jpeg" alt="Koru Ecosystem Hackathon" loading="lazy">
+          <figcaption class="gallery-caption"><strong>Koru Ecosystem Hackathon</strong><em>1st place</em></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="PW%203.jpeg" alt="Charm Bears" loading="lazy">
+          <figcaption class="gallery-caption"><strong>Charm Bears</strong><em>Talking teddy bears for early education</em></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="PW%204.jpeg" alt="Aceflow" loading="lazy">
+          <figcaption class="gallery-caption"><strong>Aceflow</strong><em>GPT-era AI tutor with millions of views on TikTok</em></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="PW%205.jpeg" alt="Toronto Demo Night" loading="lazy">
+          <figcaption class="gallery-caption"><strong>Toronto Demo Night</strong><em>Running Toronto Demo Night with Entrepreneurs First</em></figcaption>
+        </figure>
       </div>
-
-      <div class="lightbox" id="lightbox" hidden>
-        <div class="lightbox-backdrop"></div>
-        <div class="lightbox-panel" role="dialog" aria-modal="true">
-          <button class="lightbox-close" aria-label="Close">&times;</button>
-          <img class="lightbox-img" src="" alt="">
-          <h3 class="lightbox-title"></h3>
-          <p class="lightbox-desc"></p>
-          <p class="lightbox-link" hidden><a href="" target="_blank" rel="noopener noreferrer"></a></p>
-        </div>
-      </div>
-      <script>
-        (function () {
-          var lb = document.getElementById('lightbox');
-          var img = lb.querySelector('.lightbox-img');
-          var title = lb.querySelector('.lightbox-title');
-          var desc = lb.querySelector('.lightbox-desc');
-          var linkWrap = lb.querySelector('.lightbox-link');
-          var link = linkWrap.querySelector('a');
-          document.querySelectorAll('.gallery-tile').forEach(function (tile) {
-            tile.addEventListener('click', function () {
-              img.src = tile.querySelector('img').src;
-              img.alt = tile.dataset.title;
-              title.textContent = tile.dataset.title;
-              desc.textContent = tile.dataset.desc;
-              if (tile.dataset.link) {
-                link.href = tile.dataset.link;
-                link.textContent = tile.dataset.linktext || tile.dataset.link;
-                linkWrap.hidden = false;
-              } else {
-                linkWrap.hidden = true;
-              }
-              lb.hidden = false;
-              document.body.style.overflow = 'hidden';
-            });
-          });
-          function close() {
-            lb.hidden = true;
-            document.body.style.overflow = '';
-          }
-          lb.querySelector('.lightbox-backdrop').addEventListener('click', close);
-          lb.querySelector('.lightbox-close').addEventListener('click', close);
-          document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && !lb.hidden) close();
-          });
-        })();
-      </script>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </div>
